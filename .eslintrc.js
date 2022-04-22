@@ -6,13 +6,14 @@ module.exports = {
     'import/no-unresolved': 'error',
     // Since React 17 and typescript 4.1 you can safely disable the rule
     'react/react-in-jsx-scope': 'off',
+    'semi': ['never', 'error']
   },
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
-    createDefaultProgram: true,
+    createDefaultProgram: true
   },
   settings: {
     'import/resolver': {
@@ -21,10 +22,10 @@ module.exports = {
       webpack: {
         config: require.resolve('./.erb/configs/webpack.config.eslint.ts'),
       },
-      typescript: {},
+      typescript: {}
     },
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
-    },
-  },
-};
+    }
+  }
+}
